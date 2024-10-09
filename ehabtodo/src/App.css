@@ -1,0 +1,36 @@
+/* Ehab Karamullah Sharief-2134578  */
+
+
+/* using a container  */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: black; /* Black color for the heading */
+}
+
+.App-link {
+  color: inherit; 
+}
+
+/* changing the layout of the page*/
+.row {
+  margin-bottom: 20px;
+}
+
+/* layout for mobile */
+@media (max-width: 768px) {
+  .col-md-4, .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
