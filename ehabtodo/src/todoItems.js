@@ -1,7 +1,6 @@
 //Ehab Karamullah Sharief-2134578
 
 
-//using id tags and also modified dates to display all 4 colors
 const todos = [
   { 
     id: 0,
@@ -44,5 +43,4 @@ const todos = [
   }
 ];
 
-// Exporting as default to match import in App.js
 export default todos;

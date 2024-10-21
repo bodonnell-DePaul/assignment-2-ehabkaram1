@@ -6,47 +6,38 @@ import './App.css';
 import todos from './todoItems';
 import TodoForm from './TodoForm';
 
-// a function to determine the color using the day date
 const getColorVariant = (dueDate) => {
   const today = new Date();
   const due = new Date(dueDate);
-  const timeDiff = (due - today) / (1000 * 60 * 60 * 24); // calculating the difference in days
+  const timeDiff = (due - today) / (1000 * 60 * 60 * 24);
 
-  if (timeDiff < 2) return 'danger'; // danger: Red
-  if (timeDiff < 4) return 'warning'; // warning: Yellow
-  if (timeDiff < 7) return 'success'; // success: Green
-  return 'primary'; // primary: Blue
+  if (timeDiff < 2) return 'danger';
+  if (timeDiff < 4) return 'warning';
+  if (timeDiff < 7) return 'success';
+  return 'primary';
 };
 
 function App() {
   const [todoItems, setTodoItems] = useState(todos);
   const [activeTab, setActiveTab] = useState(null);
 
-  // a function to add a new ToDo item
   const addTodo = (newTodo) => {
     setTodoItems([...todoItems, newTodo]);
   };
 
   return (
     <Container>
-      {/* Header */}
       <header className="text-center my-4">
         <h1>Assignment 2: Ehab's ToDo List</h1>
       </header>
 
-      {/* adding the form and the list side by side */}
       <Row>
-        {/* Form Column */}
         <Col md={4} className="mb-4">
-  {/* <h3>Add ToDo Item</h3> */}
   <TodoForm addTodo={addTodo} />
         </Col>
-
-        {/* ToDo List and Details Column */}
         <Col md={8}>
           <Tab.Container id="list-group-tabs" activeKey={`#link${activeTab}`}>
             <Row>
-              {/* ListGroup for ToDo Titles */}
               <Col sm={4}>
                 <ListGroup>
                   {todoItems.map((todo) => (
@@ -62,8 +53,6 @@ function App() {
                   ))}
                 </ListGroup>
               </Col>
-
-              {/* The tab content for the Due Date */}
               <Col sm={8}>
                 <Tab.Content>
                   {todoItems.map((todo) => (

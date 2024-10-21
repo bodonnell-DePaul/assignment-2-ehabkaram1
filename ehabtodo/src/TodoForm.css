@@ -1,17 +1,15 @@
 /* Ehab Karamullah Sharief-2134578  */
 
 
-/* styling the to do form container */
 .todo-form {
     padding: 15px; 
-    background-color: #48ea7d; /*green color as per the requirement*/
+    background-color: #48ea7d;
     border-radius: 8px; 
     margin-bottom: 20px;
     color: white; 
     max-width: 800px; 
   }
   
-  /* the two input fields */
   .todo-form input[type="text"],
   .todo-form input[type="date"] {
     width: 90%;
@@ -22,7 +20,6 @@
     font-size: 14px; 
   }
   
-  /* Button styling */
   .todo-form .btn {
     width: 95%;
     padding: 8px; 
@@ -33,12 +30,10 @@
     font-size: 14px; 
   }
   
-  /* Button hover effect to change the button to dark blue */
   .todo-form .btn:hover {
     background-color: #0056b3;
   }
   
-  /* Label styling */
   .todo-form label {
     font-size: 14px; 
     font-weight: bold;

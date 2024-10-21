@@ -4,12 +4,11 @@
 
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
-import './TodoForm.css'; // Import custom styling  from todoform.css
+import './TodoForm.css';
 
 function TodoForm() {
   return (
     <Form className="todo-form">
-      {/* Title Input Field */}
       <Form.Group controlId="formTodoTitle">
         <Form.Label>ToDo Item</Form.Label>
         <Form.Control
@@ -18,8 +17,6 @@ function TodoForm() {
           required
         />
       </Form.Group>
-
-      {/* Due Date Input Field */}
       <Form.Group controlId="formDueDate" className="mt-3">
         <Form.Label>Due Date</Form.Label>
         <Form.Control
@@ -28,8 +25,6 @@ function TodoForm() {
           required
         />
       </Form.Group>
-
-      {/* Submit Button */}
       <Button variant="primary" type="submit" className="mt-3">
         Add Todo
       </Button>
